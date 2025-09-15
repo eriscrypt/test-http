@@ -6,7 +6,7 @@ export default function Home() {
   const [username, setUsername] = useState("");
 
   const handleAction = async () => {
-    const url = `http://ec2-98-83-26-176.compute-1.amazonaws.com:8010/v1/twitter/accounts/${username}`;
+    const url = `/api/twitter/accounts/${username}`;
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
